@@ -43,26 +43,25 @@
             let $name = $this.parent().find('.fname');
             let name = $name.val();
             console.log("name:" +name);
-            if (name.length > 2) {
-                let request = $.ajax({
-                    url: options.serverURL,
-                    type: "POST",
-                    data: {"text" : name, "action" : request_type},
-                    dataType: "json",
-                });
+            console.log(options.serverURL);
+            let request = $.ajax({
+                url: options.serverURL,
+                type: "POST",
+                data: {"text" : name, "action" : request_type},
+                dataType: "json",
+            });
 
-                request.done(function(data) {
-                    console.log("REQUEST.DONE: " + data)
-                });
+            request.done(function(data) {
+                console.log("REQUEST.DONE: " + data)
+            });
 
-                request.fail(function(jqXHR, textStatus) {
-                    alert( "Request failed: " + textStatus );
-                });
-
-            }
+            request.fail(function(jqXHR, textStatus) {
+                alert( "Request failed: " + textStatus );
+            });
 
         }
 
     }
 
 })(jQuery);
+

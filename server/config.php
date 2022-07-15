@@ -1,7 +1,8 @@
 <?php
 define('DB_HOST', 'localhost');
-define('DB_USER', 'CacciaTesoro');
-define('DB_PASSWORD', 'CacciaTesoro');
-define('DB_DATABASE', 'caccia_al_tesoro');
+define('DB_USER', 'ProvaServer');
+define('DB_PASSWORD', 'ProvaServer');
+define('DB_DATABASE', 'provaserver');
+
 ?>
 
