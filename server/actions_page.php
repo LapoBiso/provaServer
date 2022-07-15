@@ -24,12 +24,12 @@ function insertName()
     }
 
         $mysqli = new mysqli(DB_HOST,DB_USER, DB_PASSWORD,DB_DATABASE);
-        $query_string = "INSERT INTO  players(nickname, game , points) VALUES ('$player','0','0')";
+        $query_string = 'INSERT INTO  players(nickname, game , points) VALUES ("' .$player .'","0","0")';
     	// esegui la query per inserire il name nel db
 		/*$result = */
 		$result=$mysqli->query($query_string);
 
-    	$query_string = 'SELECT * FROM players WHERE id=' . $mysqli->insert_id;
+    	$query_string = 'SELECT * FROM players WHERE id="' . $mysqli->insert_id .'"';
 
 		//$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
 
